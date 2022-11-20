@@ -1,0 +1,42 @@
+{
+    "type": "waiters",
+    "monday": [
+        "Will",
+        "Jesse",
+        "Oscar",
+        "Lewis"
+    ],
+    "tuesday": [
+        "Peter",
+        "Benjamin",
+        "Frederick",
+        "Willie",
+        "Alfred",
+        "Sam"
+    ],
+    "wednesday": [
+        "Roy",
+        "Herbert",
+        "Jacob",
+        "Tom",
+        "Elmer",
+        "Carl",
+        "Lee"
+    ],
+    "thursday": [
+        "Howard",
+        "Martin",
+        "Michael",
+        "Bert"
+    ],
+    "friday": [
+        "Herman",
+        "Jim",
+        "Francis",
+        "Harvey",
+        "Earl",
+        "Eugene",
+        "Ralph",
+        "Ed"
+    ]
+}
