@@ -88,6 +88,6 @@ test( 'properly gets staff by type', async () => {
   expect( result._id ).toEqual( mongoose.Types.ObjectId("637baaf609a4508178035214") )
 } );
 
-// afterAll( async () => {
-//   await mongoose.disconnect();
-// } );
+afterAll( async () => {
+  await mongoose.disconnect();
+} );
