@@ -10,4 +10,4 @@ migrate-mongo up
 
 echo "run api server"
 
-node server
+node src/server
