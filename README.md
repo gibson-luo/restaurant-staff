@@ -5,7 +5,7 @@ Author: Zherui (Gibson) Luo
 
 ## Getting Started
 
-The application is build in docker-compose, install the docker latest version, and run command:
+The application is built in docker-compose. Install the latest docker version, and run the command:
 ```bash
 dock compose up
 ```
