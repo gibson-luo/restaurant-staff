@@ -29,6 +29,13 @@ You can also run the applications locally with local Mongo DB.
 MONGO_URL=mongodb://127.0.0.1:27017/staff 
 ```
 
+Run the Mongo Shell to import data. 
+```shell
+use staff
+db.staff.insertOne({"type":"cooks","monday":["John","William","James","Charles"],"tuesday":["George","Frank","Joseph"],"wednesday":["Thomas","Henry","Robert","Edward","Harry","Walter"],"thursday":["Albert","Samuel","David","Louis","Joe","Charlie"],"friday":["Clarence","Richard","Andrew","Daniel","Ernest"]});
+db.staff.insertOne({"type":"waiters","monday":["Will","Jesse","Oscar","Lewis"],"tuesday":["Peter","Benjamin","Frederick","Willie","Alfred","Sam"],"wednesday":["Roy","Herbert","Jacob","Tom","Elmer","Carl","Lee"],"thursday":["Howard","Martin","Michael","Bert"],"friday":["Herman","Jim","Francis","Harvey","Earl","Eugene","Ralph","Ed"]});
+```
+
 Run make command, it will launch API service and frontend App. 
 ```bash
 # path: /restaurant-staff
