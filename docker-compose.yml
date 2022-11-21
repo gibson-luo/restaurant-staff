@@ -39,7 +39,7 @@ services:
     depends_on:
       - api_mongo  
     # command: npm install && migrate-mongo up && node server  
-    entrypoint: [ "/usr/src/app/backend/wait-for.sh", "api_mongo:27017", "--", "/usr/src/app/backend/start.sh" ]
+    entrypoint: [ "/usr/src/app/backend/wait-for.sh", "api_mongo:27017", "--", "/usr/src/app/backend/start_for_docker.sh" ]
     environment:
       - MONGO_URL=mongodb://api_mongo:27017/staff
 
