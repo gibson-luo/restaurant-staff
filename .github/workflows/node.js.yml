@@ -28,5 +28,5 @@ jobs:
         cache: 'npm'
     
     - name: Test
-      run: make test
+      run: npm --prefix backend run test
     
