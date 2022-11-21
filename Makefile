@@ -7,4 +7,7 @@ runbackend:
 run:
 	make -j2 runbackend runfrontend
 
-.PHONY: runbackend runfrontend run
+test:
+	cd backend && npm test
+
+.PHONY: runbackend runfrontend run test
