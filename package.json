@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@fastify/middie": "^8.0.0",
+    "cors": "^2.8.5",
+    "lodash": "^4.17.21",
+    "middie": "^7.1.0"
+  }
+}

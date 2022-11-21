@@ -5,6 +5,25 @@ networks:
     driver: bridge
 
 services:
+  frontend:
+    image: node:alpine
+    build:
+      context: ./frontend
+      dockerfile: ./frontend/Dockerfile
+    volumes: 
+      - .:/usr/src/client
+    working_dir: /usr/src/client/frontend  
+    ports:
+      - '3000:3000'    
+    networks:
+      - staff-network    
+    depends_on:
+      - api
+      - api_mongo  
+    entrypoint: [ "/usr/src/client/frontend/wait-for.sh", "api_mongo:27017", "--","/usr/src/client/frontend/start.sh" ]  
+    environment:
+      - API_ADDR=http://127.0.0.1:3001
+
   api: 
     image: node:alpine
     build:
@@ -14,7 +33,7 @@ services:
       - .:/usr/src/app
     working_dir: /usr/src/app/backend  
     ports:
-      - '3000:3000'  
+      - '3001:3001'  
     networks:
       - staff-network  
     depends_on:
@@ -22,7 +41,6 @@ services:
     # command: npm install && migrate-mongo up && node server  
     entrypoint: [ "/usr/src/app/backend/wait-for.sh", "api_mongo:27017", "--", "/usr/src/app/backend/start.sh" ]
     environment:
-      - API_ADDR=http://api:3000
       - MONGO_URL=mongodb://api_mongo:27017/staff
 
   api_mongo:

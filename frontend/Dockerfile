@@ -1,9 +1,9 @@
 FROM node:alpine
-WORKDIR /app
+WORKDIR /client
 COPY package.json ./
 RUN npm install
 COPY ./ ./
 
-EXPOSE 3001
+EXPOSE 3000
 
-ENTRYPOINT [ "/app/start.sh" ]
+ENTRYPOINT [ "npm" "start" ]
